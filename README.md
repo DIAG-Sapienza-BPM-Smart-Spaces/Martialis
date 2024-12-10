@@ -9,4 +9,4 @@ Martialis is a next-generation framework designed to enhance the performance of 
 * _Open-Source and Modular_: fully customizable for diverse domains and use cases.
 
 ## ARCHITECTURE
-[MARTIALIS' ARCHITECTURE]()
+[MARTIALIS' ARCHITECTURE](Images/Architettura_Martialis_BW.pdf)
