@@ -23,11 +23,44 @@ Complete Martialis' architecture is presented below:
 
 ![MARTIALIS' ARCHITECTURE](https://github.com/user-attachments/assets/4fd06701-728f-44aa-b5b0-61d0dbf2ef87)
 
-# QUA AGGIUNGIAMO QUALCOSA
+Martialis is designed to address two primary types of domain-specific linguistic tasks:
+
+### Question Answering (QA)
+Martialis can answer complex questions by leveraging its *Advanced Retrieval-Augmented-Generation (RAG) Module*.
+
+When a user poses a question, the framework retrieves relevant context from the domain-specific documents stored in its **Vector Database**.
+It then integrates this context with the structured information in the Domain Knowledge Graph to enhance reasoning and generate precise answers.
+
+### TEXT GENERATION
+Martialis has great capability in generating structured, domain-specific texts using its *Ontology-Based Validator Module*.
+
+Users can request detailed outputs. The framework first retrieves relevant entities and properties from the domain ontology to construct a blueprint for the requested text. It then validates the generated text by comparing its structure and content against the ontology, assigning a confidence score to indicate compliance.
 
 # GETTING STARTED
+This guide will help you set up Martialis and run your first tasks for question answering and text generation.
 
 ## INSTALLATION
+First of all, clone the repository:
+
+
+```bash
+git clone https://github.com/DIAG-Sapienza-BPM-Smart-Spaces/Martialis.git
+```
+
+```bash
+cd Martialis
+```
+
+Before starting, ensure you have the required libraries listed in the requirements.txt file:
+
+```bash
+pip install requirements.txt
+```
+
+
+
+
+
 
 ## CONFIGURATION
 
