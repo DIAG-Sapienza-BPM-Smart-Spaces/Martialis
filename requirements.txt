@@ -1,6 +1,17 @@
-llama-index-graph-stores-neo4j
-nest_asyncio
-neo4j
-openai
-llama-index
+deeponto
+llama-index>=0.12.3
+llama-index-core>=0.12.3
+llama-index-embeddings-openai>=0.3.1
+llama-index-graph-stores-neo4j>=0.4.2
+llama-parse 
+neo4j>=5.18.0
+nest-asyncio>=1.6.0
+openai>=1.57.0
+pandas>=2.2.3
+PyMuPDF>=1.25.0
+transformers>=4.44.2
+
+
+
+
 
