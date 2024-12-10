@@ -54,7 +54,7 @@ cd Martialis
 Before starting, ensure you have the required libraries listed in the requirements.txt file:
 
 ```bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 ## CONFIGURATION
