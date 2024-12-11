@@ -1,14 +1,24 @@
 # Martialis - An Open Framework for Knowledge Graphs-based Retrieval Augmented Generation
+
+## TABLE OF CONTENT 
+1. [Overview](#overview)
+2. [Architecture](#architecture)
+3. [Installation](#installation)
+4. [Configuration](#configuration)
+5. [Running](#running)
+6. [Example use case](#example-use-case)
+7. [Documentation](#documentation)
+
 ## Overview
 Martialis is a next-generation framework designed to enhance the performance of **Large Language Models (LLMs)** in solving complex linguistic tasks in domain-specific contexts (e.g., healthcare, legal, manufacturing). By integrating **Knowledge Graphs** (KGs) and **Ontologies**, Martialis provides accurate answers and generates structured, domain-specific texts.
 
-## Key Innovations
+### Key Innovations
 * _Domain-Specific Knowledge Integration_: combines sub-symbolic (LLMs) and symbolic AI (Knowledge Graphs) for enhanced reasoning.
 * _Advanced Retrieval-Augmented Generation (RAG)_: augments traditional RAG techniques with domain-specific KGs for precise responses.
 * _Ontology-Based Validation_: ensures generated outputs align with predefined ontologies, improving consistency and reliability.
 * _Open-Source and Modular_: fully customizable for diverse domains and use cases.
 
-## ARCHITECTURE
+## Architecture
 The framework is built with a modular architecture, enabling customization and adaptability to various use cases. Each module can be replaced or extended to meet specific requirements.
 
 The core components of Martialis are:
@@ -36,10 +46,10 @@ Martialis has great capability in generating structured, domain-specific texts u
 
 Users can request detailed outputs. The framework first retrieves relevant entities and properties from the domain ontology to construct a blueprint for the requested text. It then validates the generated text by comparing its structure and content against the ontology, assigning a confidence score to indicate compliance.
 
-# GETTING STARTED
+# Getting Started
 This guide will help you set up Martialis and run your first tasks for question answering and text generation.
 
-## INSTALLATION
+## Installation
 First of all, clone the repository:
 
 
@@ -57,7 +67,7 @@ Before starting, ensure you have the required libraries listed in the requiremen
 pip install -r requirements.txt
 ```
 
-## CONFIGURATION
+## Configuration
 After cloning the repository, you need to configure the `.env` file with the correct values for your environment. Follow these steps: 
 
 1. copy the file `.env.sampple` as file `.env` using the following command
@@ -73,13 +83,13 @@ cp .env.sample .env
  * `DOCUMENT_PATH (optional)`:
  * `ONTOLOGY_PATH (optional)`: 
 
-## RUNNING
+## Running
 Coming soon
 
-## EXAMPLE USE CASE
+## Example use case
 Coming soon
 
-## DOCUMENTATION
+# Documentation
 For more detailed information on the underlying concepts and methodologies that Martialis is based on, please refer to the following papers:
 
 1. **Bianchini F., Calamo M., De Luzi F., Macrì M and Mecella M. (2024)** - [*Enhancing Complex Linguistic Tasks Resolution through Fine-tuning LLMs, RAG, and Knowledge Graphs*](https://doi.org/10.1007/978-3-031-61003-5_13)
