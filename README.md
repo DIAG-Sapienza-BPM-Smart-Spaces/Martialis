@@ -58,7 +58,20 @@ pip install -r requirements.txt
 ```
 
 ## CONFIGURATION
-Coming Soon
+After cloning the repository, you need to configure the `.env` file with the correct values for your environment. Follow these steps: 
+
+1. copy the file `.env.sampple` as file `.env` using the following command
+```bash
+cp .env.sample .env
+```
+
+2. Update variables in the `.env` file:
+ * `OPEN_API_KEY`: 
+ * `NEO4J_USERNAME`:
+ * `NEO4J_PASSWORD`:
+ * `NEO4J_URL`:
+ * `DOCUMENT_PATH (optional)`:
+ * `ONTOLOGY_PATH (optional)`: 
 
 ## RUNNING
 Coming soon
