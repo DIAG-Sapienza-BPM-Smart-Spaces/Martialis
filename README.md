@@ -69,7 +69,7 @@ pip install -r requirements.txt
 ## Configuration
 After cloning the repository, you need to configure the `.env` file with the correct values for your environment. Follow these steps: 
 
-1. copy the file `.env.sampple` as file `.env` using the following command
+1. copy the file `.env.sample` as file `.env` using the following command
 ```bash
 cp .env.sample .env
 ```
