@@ -1,14 +1,5 @@
 # Martialis - An Open Framework for Knowledge Graphs-based Retrieval Augmented Generation
 
-## TABLE OF CONTENT 
-1. [Overview](#overview)
-2. [Architecture](#architecture)
-3. [Installation](#installation)
-4. [Configuration](#configuration)
-5. [Running](#running)
-6. [Example use case](#example-use-case)
-7. [Documentation](#documentation)
-
 ## Overview
 Martialis is a next-generation framework designed to enhance the performance of **Large Language Models (LLMs)** in solving complex linguistic tasks in domain-specific contexts (e.g., healthcare, legal, manufacturing). By integrating **Knowledge Graphs** (KGs) and **Ontologies**, Martialis provides accurate answers and generates structured, domain-specific texts.
 
@@ -17,6 +8,14 @@ Martialis is a next-generation framework designed to enhance the performance of 
 * _Advanced Retrieval-Augmented Generation (RAG)_: augments traditional RAG techniques with domain-specific KGs for precise responses.
 * _Ontology-Based Validation_: ensures generated outputs align with predefined ontologies, improving consistency and reliability.
 * _Open-Source and Modular_: fully customizable for diverse domains and use cases.
+
+## TABLE OF CONTENT 
+1. [Architecture](#architecture)
+2. [Installation](#installation)
+3. [Configuration](#configuration)
+4. [Running](#running)
+5. [Example use case](#example-use-case)
+6. [Documentation](#documentation)
 
 ## Architecture
 The framework is built with a modular architecture, enabling customization and adaptability to various use cases. Each module can be replaced or extended to meet specific requirements.
