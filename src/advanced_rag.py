@@ -38,25 +38,31 @@ from dotenv import load_dotenv
 
 # For Llama index functionalities
 from llama_parse import LlamaParse  
+from llama_index.core.node_parser import MarkdownElementNodeParser 
+from llama_index.llms.openai import OpenAI    
+from llama_index.core import VectorStoreIndex
 
 # =====================
-#   FILE SELECTION
+#   KEY LOADING
 # =====================
 
-# Carica le variabili d'ambiente dal file .env
 load_dotenv()
 
-# Ottieni la chiave API di OpenAI
 openai_api_key = os.getenv("OPENAI_API_KEY")
 llama_api_key = os.getenv("LLAMA_API_KEY")
 
-# Imposta la chiave API nell'ambiente
 if openai_api_key:
     os.environ["OPENAI_API_KEY"] = openai_api_key
-    print("API key loaded successfully.")
+    print("OpenAI API key loaded successfully.")
 else:
-    print("API key not found in .env file.")
+    print("OpenAI API key not found in .env file.")
 
+if llama_api_key:
+    os.environ["LLAMA_API_KEY"] = llama_api_key
+    print("Llama API key loaded successfully.")
+else:
+    print("Llama API key not found in .env file.")
+  
 # =====================
 #   FILE SELECTION
 # =====================
@@ -77,15 +83,37 @@ if selected_file:
 else:
     print("None file selected")
 
-# =====================
-#   DOCUMENT PARSING
-# =====================
-             
+# ================================
+#   DOCUMENT PARSING AND INDEXING
+# ================================
+
 parser = LlamaParse(
-    os.environ["LLAMA_API_KEY"] = llama_api_key
-    #api_key="llx-x01ouaHuW4QSItmZFCo0ODxNe1MVw8PCYHg2U3YTSKtKbPaS",    # chiave FILIPPO di https://cloud.llamaindex.ai/landing
-    result_type="markdown"                                             # altre opzioni: json, text, html, raw
+    os.environ["LLAMA_API_KEY"] = llama_api_key,
+    result_type="markdown" # other options json, text, html, raw                                      
 )
 documents = await parser.aload_data(selected_file)
+Print(f'Document {selected_file} correctly parsed')
+
+node_parser = MarkdownElementNodeParser(
+  llm=OpenAI(model="gpt-4-turbo"),
+  num_workers=4) 
+
+#DEFINIRE MEGLIO
+#nodes = node_parser.get_nodes_from_documents(documents)
+#base_nodes, objects = node_parser.get_nodes_and_objects(nodes)
+#recursive_index = VectorStoreIndex(nodes=base_nodes+objects)
+
+index = VectorStoreIndex.from_documents(documents)
+Print(f'Document {selected_file} correctly indexed')
+
+# =====================
+#   DOCUMENT INDEXING
+# =====================
+
+query_engine = index.as_query_engine(similarity_top_k = 2)
+response = query_engine.query(user_query)
+retrieved_nodes = response.source_nodes
+retrieved_list = [node.text for node in retrieved_nodes]
+
 
 
