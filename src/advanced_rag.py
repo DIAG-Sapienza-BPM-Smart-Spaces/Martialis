@@ -48,6 +48,7 @@ load_dotenv()
 
 # Ottieni la chiave API di OpenAI
 openai_api_key = os.getenv("OPENAI_API_KEY")
+llama_api_key = os.getenv("LLAMA_API_KEY")
 
 # Imposta la chiave API nell'ambiente
 if openai_api_key:
@@ -81,8 +82,8 @@ else:
 # =====================
              
 parser = LlamaParse(
-    # api_key="llx-oBMnoRgUcdtfgkyiFiDrKh5ka5IwUCqm3WlkfViw3TC8wNCA",  # chiave MARCO di https://cloud.llamaindex.ai/landing
-    api_key="llx-x01ouaHuW4QSItmZFCo0ODxNe1MVw8PCYHg2U3YTSKtKbPaS",    # chiave FILIPPO di https://cloud.llamaindex.ai/landing
+    os.environ["LLAMA_API_KEY"] = llama_api_key
+    #api_key="llx-x01ouaHuW4QSItmZFCo0ODxNe1MVw8PCYHg2U3YTSKtKbPaS",    # chiave FILIPPO di https://cloud.llamaindex.ai/landing
     result_type="markdown"                                             # altre opzioni: json, text, html, raw
 )
 documents = await parser.aload_data(selected_file)
