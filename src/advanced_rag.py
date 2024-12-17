@@ -41,6 +41,7 @@ from llama_parse import LlamaParse
 from llama_index.core.node_parser import MarkdownElementNodeParser 
 from llama_index.llms.openai import OpenAI    
 from llama_index.core import VectorStoreIndex
+from llama_index.core import PropertyGraphIndex
 
 # =====================
 #   KEY LOADING
@@ -94,10 +95,11 @@ parser = LlamaParse(
 documents = await parser.aload_data(selected_file)
 Print(f'Document {selected_file} correctly parsed')
 
+''' DA TOGLIERE
 node_parser = MarkdownElementNodeParser(
   llm=OpenAI(model="gpt-4-turbo"),
   num_workers=4) 
-
+'''
 #DEFINIRE MEGLIO
 #nodes = node_parser.get_nodes_from_documents(documents)
 #base_nodes, objects = node_parser.get_nodes_and_objects(nodes)
