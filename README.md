@@ -75,12 +75,12 @@ cp .env.sample .env
 ```
 
 2. Update variables in the `.env` file:
- * `OPEN_API_KEY`: 
- * `NEO4J_USERNAME`:
- * `NEO4J_PASSWORD`:
- * `NEO4J_URL`:
- * `DOCUMENT_PATH (optional)`:
- * `ONTOLOGY_PATH (optional)`: 
+ * `OPEN_API_KEY`: your openai api key
+ * `LLAMA_API_KEY`: your llama api key (check: https://cloud.llamaindex.ai/login)
+ * `MISTRAL_API_KEY`: your mistral api key
+ * `NEO4J_USERNAME`: username from neo4j DB
+ * `NEO4J_PASSWORD`: password from neo4j DB
+ * `NEO4J_URL`: bolt://localhost:7687
 
 ## Running
 Coming soon
